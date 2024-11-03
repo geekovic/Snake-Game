@@ -1,0 +1,79 @@
+/* General box model reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('snake.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* background-color: #333333; */
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Container for the game and leaderboard */
+.game-container {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+/* Canvas styling */
+canvas {
+    background-color: #111;
+    border: 1px solid #ddd;
+}
+
+/* Score styling */
+#livescore {
+    position: absolute;
+    bottom: -38px;
+    left: 35%;
+    transform: translate(-50%, 0);
+    font-size: 18px;
+    /* margin-left: 20px;
+    max-height: 300px;
+    overflow-y: auto; */
+    border: 1px solid #fff;
+    padding: 4px;
+    background-color: #222;
+}
+
+/* Leaderboard styling */
+#leaderboard {
+    margin-left: 20px;
+    font-size: 18px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #fff;
+    padding: 10px;
+    background-color: #222;
+}
+
+/* Leaderboard item styling */
+.leaderboard-item {
+    margin: 5px 0;
+}
+
+/* Input field styling */
+#playerName {
+    margin-top: 10px;
+}
+
+/* Submit button styling */
+#submitScore {
+    margin-top: 10px;
+    cursor: pointer;
+}
