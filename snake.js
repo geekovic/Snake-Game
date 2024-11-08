@@ -47,9 +47,8 @@ function drawFood() {
 
 // Function to move the snake
 function moveSnake() {
-    let head = { ...snake[0] }; // Create a copy of the snake's head
+    let head = { ...snake[0] };
 
-    // Move the head based on the current direction
     if (direction === "LEFT") head.x -= boxSize;
     if (direction === "RIGHT") head.x += boxSize;
     if (direction === "UP") head.y -= boxSize;
@@ -57,15 +56,18 @@ function moveSnake() {
 
     // Check if snake has eaten food
     if (head.x === food.x && head.y === food.y) {
-        food = { x: randomCoordinate(), y: randomCoordinate() }; // Generate new food position
-        score++; // Increment score
-        document.getElementById("score").innerText = `Score: ${score}`; // Update score display
+        food = { x: randomCoordinate(), y: randomCoordinate() };
+        score++;
+        document.querySelector("#livescore h2").innerText = `Score: ${score}`;
     } else {
-        snake.pop(); // Remove the last segment of the snake
+        snake.pop(); // Remove the last segment of the snake if no food eaten
     }
 
     snake.unshift(head); // Add the new head to the front of the snake
 }
+
+
+
 
 // Function to check for collisions
 function checkCollision() {
